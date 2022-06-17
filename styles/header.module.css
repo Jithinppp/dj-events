@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  border-bottom: 1px solid black;
+}
+
+.logo {
+  font-size: 1.7rem;
+  letter-spacing: -2px;
+  color: rgb(226, 36, 36);
+  font-weight: 400;
+}
+
+.nav__items {
+  list-style: none;
+  display: flex;
+}
+.nav__item {
+  margin: 0 0.4rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+
+.nav__item:hover {
+  color: #fff;
+  background-color: rgb(226, 36, 36);
+  border-radius: 4px;
+}
