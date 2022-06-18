@@ -1,0 +1,76 @@
+.eventContainer {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.controlsContainer {
+  padding: 0 1rem;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.edit {
+  color: #fff;
+  background-color: rgb(62, 141, 244);
+  padding: 6px 20px;
+  border-radius: 4px;
+  margin-right: 0 1rem;
+}
+
+.delete {
+  color: #fff;
+  background-color: rgb(244, 62, 62);
+  padding: 6px 20px;
+  border-radius: 4px;
+  margin: 0 1rem;
+}
+.edit svg {
+  margin: 0 0.3rem;
+  font-size: 0.8rem;
+}
+.delete svg {
+  margin: 0 0.3rem;
+  font-size: 0.8rem;
+}
+
+.date {
+  width: 100%;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+  margin-top: 2rem;
+  max-width: 960px;
+}
+
+.image {
+  border-radius: 0.5rem;
+}
+
+.title {
+  font-size: 3rem;
+  letter-spacing: -4px;
+  color: rgb(35, 34, 34);
+  font-weight: 600;
+}
+
+.performers {
+  width: 100%;
+  text-align: left;
+  max-width: 960px;
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+
+.description {
+  width: 100%;
+  text-align: left;
+  max-width: 960px;
+  margin: 2rem 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
