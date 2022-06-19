@@ -8,7 +8,9 @@ export default function EventItem({ event }) {
       <div className={styles.imageContainer}>
         <Image
           src={
-            event.image ? event.image : "/../public/images/event-default.png"
+            event.image
+              ? event.image.data.attributes.url
+              : "/../public/images/event-default.png"
           }
           height={100}
           width={140}
@@ -18,7 +20,7 @@ export default function EventItem({ event }) {
       <div className={styles.descriptionContainer}>
         <h3>{event.name}</h3>
         <p>
-          {event.date} at {event.time}{" "}
+          {new Date(event.date).toLocaleDateString("en-IN")} at {event.time}
         </p>
         <Link href={`/events/${event.slug}`}>
           <p className={styles.readMore}>Read more</p>

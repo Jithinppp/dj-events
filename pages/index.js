@@ -17,7 +17,7 @@ export default function Home({ events }) {
           <p className={styles.noEvents}>Sorry no events to Show</p>
         )}
         {events.map((event) => {
-          return <EventItem key={event.id} event={event} />;
+          return <EventItem key={event.id} event={event.attributes} />;
         })}
         <Link href={"/events"}>
           <p className={styles.viewEvents}>View all events</p>
@@ -28,11 +28,13 @@ export default function Home({ events }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${API_URL}/api/events`);
+  const res = await fetch(
+    `${API_URL}/api/events?populate=*&pagination[limit]=3&sort=date`
+  );
   const events = await res.json();
-
   return {
-    props: { events: events.slice(0, 3) },
+    props: { events: events.data },
+
     revalidate: 1,
   };
 }

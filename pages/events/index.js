@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Layout from "@/components/Layout";
 import { API_URL } from "@/config/index";
 import EventItem from "@/components/EventItem";
@@ -16,18 +15,18 @@ export default function Home({ events }) {
         <p className={styles.noEvents}>Sorry no events to Show</p>
       )}
       {events.map((event) => {
-        return <EventItem key={event.id} event={event} />;
+        return <EventItem key={event.id} event={event.attributes} />;
       })}
     </Layout>
   );
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${API_URL}/api/events`);
+  const res = await fetch(`${API_URL}/api/events?populate=*`);
   const events = await res.json();
 
   return {
-    props: { events },
+    props: { events: events.data },
     revalidate: 1,
   };
 }
