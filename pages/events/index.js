@@ -3,7 +3,7 @@ import { API_URL } from "@/config/index";
 import EventItem from "@/components/EventItem";
 import styles from "@/styles/home.module.css";
 
-export default function Home({ events }) {
+export default function Events({ events }) {
   return (
     <Layout
       title="DJ | musical Events"
